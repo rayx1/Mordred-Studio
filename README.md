@@ -1,4 +1,4 @@
-# Mordred Studio 1.0.0
+# Mordred Studio 1.1.1
 
 Mordred Studio is a standalone Windows interface for calculating molecular
 descriptors with Mordred and RDKit. Import molecules, calculate 2D or 3D
@@ -8,7 +8,7 @@ descriptors, inspect results, and export CSV files through a desktop GUI.
 
 **[Download Mordred Studio for Windows](https://github.com/rayx1/Mordred-Studio/releases/)**
 
-Download `Mordred-Studio-1.0.0-windows-x64.zip`, extract it, verify
+Download `Mordred-Studio-1.1.1-windows-x64.zip`, extract it, verify
 `Mordred-Studio.exe` against `SHA256SUMS.txt`, and run it on 64-bit Windows.
 
 The executable contains the Windows application, Python/Tk runtime,
@@ -18,6 +18,10 @@ Calculations run locally; molecular data is not uploaded.
 
 ## Key functions
 
+- **Clear / Reset** removes loaded files, input text, results, issues and progress for a fresh batch.
+
+- Multi-file SDF selection with one combined CSV export
+- SourceFile and SourceRecord columns for tracing every molecule to its input
 - Editable SMILES input and SMILES/TXT, CSV, TSV, SDF, and MOL import
 - 1,613 2D descriptors; 1,826 total with 3D descriptors enabled
 - All descriptor families or one selected family
@@ -26,6 +30,13 @@ Calculations run locally; molecular data is not uploaded.
 - Invalid-input flags and descriptor issue reports
 - Help, About, scientific citation, and license information
 - Custom molecular icon and themed startup splash screen
+
+Use **Open molecule files...** and Ctrl/Shift to select multiple SDF files,
+then **Calculate** and **Export CSV...**. Every molecule from the selected files
+is included in one results CSV. SourceFile stores the original full path;
+SourceRecord is the one-based position within that file. Duplicate molecule
+names are retained. An unreadable file cancels the new import without changing
+the previous input.
 
 The result table previews up to 80 matching descriptor columns and 500 rows.
 CSV export includes all calculated rows and descriptor columns. 3D calculations
@@ -56,7 +67,7 @@ MIT License. See [LICENSE](LICENSE). Bundled components retain their respective
 licenses; see [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
 
 The notices are also available inside the application under
-**Help → Licenses and acknowledgments**.
+**Help â†’ Licenses and acknowledgments**.
 
 ## Download Mordred Studio
 
@@ -65,7 +76,7 @@ The Windows binary is provided through GitHub Releases:
 
 ### Quick download
 
-For version 1.0.0, select `Mordred-Studio-1.0.0-windows-x64.zip` from the
+For version 1.1.1, select `Mordred-Studio-1.1.1-windows-x64.zip` from the
 release assets. The ZIP includes the executable, documentation, licenses,
 and `SHA256SUMS.txt`.
 
@@ -86,10 +97,10 @@ To verify the extracted executable in PowerShell:
 Get-FileHash -Algorithm SHA256 .\Mordred-Studio.exe
 ```
 
-Expected SHA-256 for the **version 1.0.0 executable**:
+Expected SHA-256 for the **version 1.1.1 executable**:
 
 ```text
-D546E29EF64CB362CB7C6B36B76F640836772CB31F39E838A508DFF85D6B87AC
+3A1DF6B89C353A7C0B0DF53313B7AB9DE7A1FFD055883F58E6F84AC77FC2060F
 ```
 
 This checksum applies to `Mordred-Studio.exe`, not the ZIP archive.

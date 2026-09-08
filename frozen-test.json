@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "2d_descriptors": 1613,
+  "total_descriptors": 1826,
+  "checks": [
+    "known benzene SLogP",
+    "ethanol atom count",
+    "upstream parity",
+    "invalid input",
+    "cancellation",
+    "3D SDF calculation",
+    "CSV import/export",
+    "multi-SDF combined export and provenance",
+    "multi-file cancellation",
+    "unreadable batch input"
+  ]
+}
